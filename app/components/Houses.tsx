@@ -1,0 +1,108 @@
+import Image from "next/image";
+import { FaBed, FaDollarSign, FaFile, FaLeaf } from "react-icons/fa";
+import { FaHouse } from "react-icons/fa6";
+
+export default function Houses() {
+  return (
+    <section
+      id="domy"
+      className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[var(--mainBg)] via-[#ffffff] via-50% to-[#24425C]"
+    >
+      <div className="flex flex-row items-center gap-5 w-full">
+        <div className="w-2/3 h-[8px] bg-[#182B3C]" />
+        <h1 className="text-8xl font-semibold text-[#182B3C]">LOKALE</h1>
+        <div className="w-1/5 h-[8px] bg-[#182B3C]" />
+      </div>
+      <div className="pl-9 mt-10">
+        <div className="relative aspect-[16/9] flex-1 w-full h-screen">
+          <Image
+            src="/image_dron.png"
+            alt="Zdjęcie inwestycji"
+            fill
+            className="object-cover "
+            priority={false}
+            unoptimized
+          />
+        </div>
+      </div>
+
+      <div className="flex flex-row w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-40 space-x-56 z-10 -mt-28">
+        <div className=" space-y-4">
+          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+            Mieszkanie 1 a
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-row w-full bg-white py-5 justify-between items-center px-40 space-x-56 z-20 drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
+        <div className=" space-y-4">
+          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+            Mieszkanie 1 a
+          </p>
+          <p className="text-4xl font-semibold text-[#182B3C] text-center">
+            Status:{" "}
+            <span className="text-[var(--themeBlueLight)]">Zarezerwowany</span>
+          </p>
+          <div className="flex flex-col items-start pl-12">
+            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+              <FaDollarSign />
+              Cena: 693 036 zł
+            </p>
+            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+              <FaHouse />
+              Metraż: 64,17 m²
+            </p>
+            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+              <FaBed />
+              Pokoje: 4
+            </p>
+            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+              <FaLeaf />
+              Ogródek: 121,59 m²
+            </p>
+          </div>
+          <a
+            href={"/"}
+            className="flex items-center justify-center gap-3 px-[100px] py-3 bg-[var(--themeBlueDark)] text-white text-4xl font-semibold w-fit rounded-[5px]"
+          >
+            <FaFile />
+            Szczegóły
+          </a>
+        </div>
+        <div className="relative w-full p-5 flex items-center justify-center">
+          <div className="absolute top-0 left-0 h-[60%] w-[30%] border-t-[3px] border-l-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
+
+          <div className="absolute bottom-0 right-0 h-[60%] w-[30%] border-b-[3px] border-r-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
+
+          <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-2 bg-white font-semibold text-5xl text-black">
+            parter
+          </div>
+
+          <div className="flex flex-col items-center aspect-[16/9] border-[3px] border-transparent">
+            <div className="relative aspect-[16/9] flex-1 max-w-[400px] h-[236px]">
+              <Image
+                src="/visualization.png"
+                alt="Zdjęcie inwestycji"
+                fill
+                className="object-contain"
+                priority={false}
+                unoptimized
+              />
+            </div>
+            <div className="flex flex-row items-center justify-center gap-3 mt-4">
+              <div className="w-3.5 h-3.5 rounded-full bg-[var(--themeBlueDark)]" />
+              <div className="w-3.5 h-3.5 rounded-full bg-[var(--themeBlueLight)]" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-row w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-40 space-x-56 z-10">
+        <div className=" space-y-4">
+          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+            Mieszkanie 1 a
+          </p>
+        </div>
+      </div>
+    </section>
+  );
+}

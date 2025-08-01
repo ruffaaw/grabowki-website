@@ -4,13 +4,14 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --mainBg: #d5ebf9;
+  --themeBlueDark: #24425c;
+  --themeBlueLight: #4d7a9d;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {

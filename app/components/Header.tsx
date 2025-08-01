@@ -28,9 +28,9 @@ export default function Header() {
     <header
       className={`fixed w-full z-30 flex justify-between items-center px-16 py-5 ${
         isMenuOpen
-          ? "bg-[var(--themeBlueDark)]"
+          ? "bg-[var(--themeBlueLight)]"
           : isScrolled
-          ? "bg-[var(--themeBlueDark)]"
+          ? "bg-[var(--themeBlueLight)]"
           : "bg-transparent"
       }`}
     >

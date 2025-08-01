@@ -1,6 +1,7 @@
 import AboutInvestment from "./components/AboutInvestment";
 import Header from "./components/Header";
 import HomeSection from "./components/HomeSection";
+import Profits from "./components/Profits";
 import "./globals.css";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         <Header />
         <HomeSection />
         <AboutInvestment />
+        <Profits />
       </main>
       <footer className=""></footer>
     </div>

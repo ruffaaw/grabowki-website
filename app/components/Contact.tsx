@@ -118,7 +118,7 @@ export default function Contact() {
                   height={160}
                 />
               </a>
-              <div className="flex max-lg:items-center flex-col text-center lg:text-left font-bold text-black max-w-md">
+              <div className="flex max-lg:items-center flex-col text-center lg:text-left font-semibold text-black max-w-md">
                 <h2 className="text-xl md:text-2xl mb-3">
                   Kontakt biura nieruchomości
                 </h2>

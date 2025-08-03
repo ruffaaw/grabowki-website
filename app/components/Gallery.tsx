@@ -59,7 +59,7 @@ export default function Gallery() {
         <div className="w-4/5 h-[8px] bg-white" />
       </div>
       <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center gap-4 py-10">
-        <div className="relative w-full h-[60vh] flex items-center justify-center overflow-visible">
+        <div className="relative w-full h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[70vh] xl:h-[80vh] flex items-center justify-center overflow-visible">
           <button
             onClick={prevImage}
             className="absolute left-0 z-20 text-white bg-black/40 hover:bg-white hover:text-black rounded-full w-14 h-14 flex items-center justify-center"

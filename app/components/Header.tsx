@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed w-full z-30 flex justify-between items-center px-16 py-5 ${
+      className={`fixed w-screen z-30 flex justify-between items-center  ${
         isMenuOpen
           ? "bg-[var(--themeBlueLight)]"
           : isScrolled
@@ -35,11 +35,11 @@ export default function Header() {
       }`}
     >
       <div
-        className="flex items-center h-20 "
+        className="flex items-center h-20 px-6 lg:px-16 py-4 lg:py-5"
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
-        <Link href="#home">
+        <Link href="#home" className="max-lg:max-w-[58px]">
           <Image
             src="/logo.png"
             alt="Logo"
@@ -50,7 +50,7 @@ export default function Header() {
         </Link>
       </div>
       <nav
-        className="hidden xl:flex space-x-5 xl:space-x-8 text-lg lg:text-[40px] items-center justify-center"
+        className="hidden xl:flex space-x-5 xl:space-x-8 text-lg lg:text-[40px] items-center justify-center px-6 lg:px-16 py-4 lg:py-5"
         data-aos="zoom-out"
         data-aos-duration="1000"
       >
@@ -78,7 +78,7 @@ export default function Header() {
         </Link>
       </nav>
       <button
-        className="xl:hidden flex items-center text-white py-7 max-md:pr-6 md:pr-12 lg:pr-[100px]"
+        className="xl:hidden flex items-center text-white px-6 lg:px-16 py-4 lg:py-5"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         data-aos="zoom-out"
         data-aos-duration="1000"
@@ -99,10 +99,10 @@ export default function Header() {
         </svg>
       </button>
       {isMenuOpen && (
-        <div className="fixed flex flex-col items-center top-16 bg-green-spring-900 shadow-md z-30 w-screen h-auto ">
+        <div className="fixed flex flex-col items-center top-[80px] bg-[var(--themeBlueLight)] z-30 w-screen h-auto ">
           <Link
             href="#o-inwestycji"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">O inwestycji</p>
@@ -110,35 +110,35 @@ export default function Header() {
 
           <Link
             href="#lokalizacja"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Lokalizacja</p>
           </Link>
           <Link
             href="#profity"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 "
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Profity</p>
           </Link>
           <Link
             href="#domy"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Domy</p>
           </Link>
           <Link
             href="#galeria"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Galeria</p>
           </Link>
           <Link
             href="#kontakt"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-green-spring-300 hover:text-green-spring-900 break-words max-w-full"
+            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Kontakt</p>

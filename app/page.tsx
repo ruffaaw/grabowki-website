@@ -10,7 +10,7 @@ import "./globals.css";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="overflow-hidden">
       <main className="">
         <Header />
         <HomeSection />

@@ -6,21 +6,21 @@ export default function Contact() {
   return (
     <section
       id="kontakt"
-      className="flex flex-col pb-24 px-[70px] bg-transparent bg-linear-to-b from-[var(--mainBg)] from-[53%] to-[#ffffff] overflow-hidden"
+      className="flex flex-col pb-14 md:pb-24 px-5 md:px-[70px] bg-transparent bg-linear-to-b from-[var(--mainBg)] from-[53%] to-[#ffffff] overflow-hidden"
     >
-      <div className="flex flex-row items-start justify-between w-full h-full">
+      <div className="flex flex-col md:flex-row items-start justify-between w-full h-full gap-20">
         <div className="w-full h-full">
-          <h1 className="text-6xl font-semibold text-[var(--themeBlueDark)] ml-6">
+          <h1 className="text-6xl font-semibold text-[var(--themeBlueDark)] ml-3 md:ml-6">
             kontakt
           </h1>
-          <div className="relative flex flex-col items-start pt-12 pl-12 w-full">
-            <div className="absolute top-0 left-0 w-3/5 h-[3px] bg-[var(--themeBlueDark)]" />
-            <div className="absolute top-0 left-0 h-2/5 w-[2px] bg-[var(--themeBlueDark)]" />
+          <div className="relative flex flex-col items-start pt-6 pl-6 md:pt-12 md:pl-12 w-full">
+            <div className="absolute top-0 left-0 w-full md:w-3/5 h-[3px] bg-[var(--themeBlueDark)]" />
+            <div className="absolute top-0 left-0 h-10/12 md:h-2/5 w-[3px] bg-[var(--themeBlueDark)]" />
             <div className="flex flex-col space-y-7">
-              <h2 className="text-[40px] text-black font-semibold text-center">
+              <h2 className="text-[40px] text-black font-semibold text-left md:text-center">
                 Masz pytania? Chętnie na nie odpowiemy!
               </h2>
-              <div className="flex flex-col space-y-7 ml-7">
+              <div className="flex flex-col space-y-7 md:ml-7">
                 <div className="space-y-2 w-full">
                   <p className="text-xl font-semibold text-black ml-2">
                     Imię i nazwisko
@@ -31,7 +31,7 @@ export default function Contact() {
                     placeholder="Wpisz swoje imię i nazwisko"
                   />
                 </div>
-                <div className="flex flex-row justify-between gap-10">
+                <div className="flex flex-col md:flex-row justify-between gap-7 md:gap-10">
                   <div className="space-y-2 w-full">
                     <p className="text-xl font-semibold text-black ml-2">
                       Adres e-mail
@@ -63,7 +63,7 @@ export default function Contact() {
                     rows={3}
                   />
                 </div>
-                <div className="ml-5">
+                <div className="md:ml-5">
                   <label className="flex items-center">
                     <input
                       type="checkbox"
@@ -104,7 +104,7 @@ export default function Contact() {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
           <div className="flex flex-row justify-between items-center w-full max-lg:space-y-4">
-            <div className="flex justify-center items-center gap-6 w-full ">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-6 w-full ">
               <a
                 href="https://www.n20.pl/"
                 target="_blank"

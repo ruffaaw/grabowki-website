@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer>
       <div className="w-full h-full flex flex-col ">
-        <div className="flex flex-row justify-between bg-[var(--themeBlueDark)] px-4">
+        <div className="flex flex-row justify-between bg-[var(--themeBlueDark)] px-6 py-6 md:px-4 md:py-3">
           <div className="flex flex-col lg:flex-row justify-center items-center">
             <Link
               href="https://www.n20.pl/"

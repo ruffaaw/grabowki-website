@@ -140,7 +140,7 @@ export default function Houses() {
           <div className="absolute bottom-0 right-0 h-[60%] w-[30%] border-b-[3px] border-r-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
 
           <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-2 bg-white font-semibold text-5xl text-black">
-            parter
+            {current.id % 2 ? "piętro" : "parter"}
           </div>
 
           <div className="flex flex-col items-center aspect-[16/9] border-[3px] border-transparent my-7">

@@ -12,7 +12,7 @@ function Footer() {
               rel="noopener noreferrer"
               className="p-2"
             >
-              <Image src="/n20logo.png" alt="N20" width={128} height={80} />
+              <Image src="/n20logo.png" alt="N20" width={176} height={110} />
             </Link>
           </div>
           <div className="flex flex-col justify-center items-center ">
@@ -26,8 +26,8 @@ function Footer() {
                 <Image
                   src="/Facebook_icon.png"
                   alt="Facebook"
-                  width={80}
-                  height={80}
+                  width={96}
+                  height={96}
                   className="hover:scale-110 transition-transform"
                 />
               </Link>
@@ -40,19 +40,21 @@ function Footer() {
                 <Image
                   src="/Instagram_icon.png"
                   alt="Instagram"
-                  width={80}
-                  height={80}
+                  width={96}
+                  height={96}
                   className="hover:scale-110 transition-transform"
                 />
               </Link>
             </div>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center py-2 bg-[#555555] text-white px-4 font-semibold">
-          <p className="my-2 text-center md:text-left">2025 Policrafts ©</p>
+        <div className="flex flex-col md:flex-row justify-between items-center py-3 bg-[#555555] text-white px-4 font-semibold">
+          <p className="my-2 text-center md:text-left text-2xl">
+            2025 Policrafts ©
+          </p>
           <div className="text-center md:text-right">
-            <p className="p-0 m-0">Wizualizacje: Maciej Krzyszkowski</p>
-            <p className="p-0 m-0">Realizacja witryny: Rafał Ciupek</p>
+            <p className="p-0 m-0 text-sm">Wizualizacje: Maciej Krzyszkowski</p>
+            <p className="p-0 m-0 text-sm">Realizacja witryny: Rafał Ciupek</p>
           </div>
         </div>
       </div>

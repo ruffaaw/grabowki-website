@@ -8,20 +8,20 @@ export default function Contact() {
       id="kontakt"
       className="flex flex-col pb-24 px-[70px] bg-transparent bg-linear-to-b from-[var(--mainBg)] from-[53%] to-[#ffffff] overflow-hidden"
     >
-      <div className="flex flex-row items-start justify-between w-full h-full gap-20">
+      <div className="flex flex-row items-start justify-between w-full h-full">
         <div className="w-full h-full">
           <h1 className="text-6xl font-semibold text-[var(--themeBlueDark)] ml-6">
             kontakt
           </h1>
-          <div className="relative flex flex-col items-start pt-12 pl-12">
+          <div className="relative flex flex-col items-start pt-12 pl-12 w-full">
             <div className="absolute top-0 left-0 w-3/5 h-[3px] bg-[var(--themeBlueDark)]" />
             <div className="absolute top-0 left-0 h-2/5 w-[2px] bg-[var(--themeBlueDark)]" />
             <div className="flex flex-col space-y-7">
-              <h2 className="text-4xl text-black font-semibold text-center">
+              <h2 className="text-[40px] text-black font-semibold text-center">
                 Masz pytania? Chętnie na nie odpowiemy!
               </h2>
               <div className="flex flex-col space-y-7 ml-7">
-                <div className="space-y-2">
+                <div className="space-y-2 w-full">
                   <p className="text-xl font-semibold text-black ml-2">
                     Imię i nazwisko
                   </p>
@@ -68,7 +68,7 @@ export default function Contact() {
                     <input
                       type="checkbox"
                       name="privacyPolicy"
-                      className="form-checkbox h-5 w-5 text-black rounded focus:ring-black accent-black bg-white"
+                      className="form-checkbox h-5 w-5 text-black rounded focus:ring-black accent-black bg-white cursor-pointer"
                       //   checked={formData.privacyPolicy}
                       //   onChange={handleChange}
                       required
@@ -84,7 +84,7 @@ export default function Contact() {
                     </span>
                   </label>
                 </div>
-                <button className="text-2xl font-semibold text-white bg-[var(--themeBlueDark)] rounded-[5px] py-3">
+                <button className="text-2xl font-semibold text-white bg-[var(--themeBlueDark)] rounded-[5px] py-3 cursor-pointer">
                   Wyślij
                 </button>
               </div>

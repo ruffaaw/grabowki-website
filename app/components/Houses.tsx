@@ -37,11 +37,11 @@ export default function Houses() {
       className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[var(--mainBg)] via-[#ffffff] via-50% to-[#24425C]"
     >
       <div className="flex flex-row items-center gap-5 w-full">
-        <div className="w-2/3 h-[8px] bg-[#182B3C]" />
+        <div className="w-full md:w-2/3 h-[8px] bg-[#182B3C]" />
         <h1 className="text-8xl font-semibold text-[#182B3C]">LOKALE</h1>
-        <div className="w-1/5 h-[8px] bg-[#182B3C]" />
+        <div className="w-full md:w-1/5 h-[8px] bg-[#182B3C]" />
       </div>
-      <div className="pl-9 mt-10">
+      <div className="md:pl-9 mt-10">
         <div className="relative aspect-[16/9] flex-1 w-full h-screen">
           <Image
             src="/dron111.png"
@@ -51,11 +51,11 @@ export default function Houses() {
             priority={false}
             unoptimized
           />
-          <button
+          {/* <button
             className="absolute top-[20%] left-[30%] w-10 h-10 rounded-full bg-[var(--themeBlueDark)] opacity-60 hover:opacity-100 transition-all"
             onClick={() => setCurrentId(0)}
             title="Mieszkanie 1a"
-          />
+          /> */}
 
           {mieszkania.map((mieszkanie) => (
             <button
@@ -81,23 +81,21 @@ export default function Houses() {
       </div>
 
       {previous && (
-        <div className="flex flex-row w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-40 space-x-56 z-10 -mt-28">
-          <div className=" space-y-4">
-            <p className="text-5xl font-semibold text-[#182B3C] text-center">
-              {previous.nazwa}
-            </p>
-          </div>
+        <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10 -mt-28">
+          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+            {previous.nazwa}
+          </p>
         </div>
       )}
 
-      <div className="flex flex-row w-full bg-white py-5 justify-between items-center px-40 space-x-56 z-20 drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
+      <div className="flex flex-row w-full bg-white py-5 md:justify-between items-center md:px-40 space-x-56 z-20 drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
         <motion.div
           key={currentId}
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.4 }}
-          className=" space-y-4"
+          className="space-y-1 md:space-y-4 "
         >
           <p className="text-5xl font-semibold text-[#182B3C] text-center">
             {current.nazwa}
@@ -109,7 +107,7 @@ export default function Houses() {
             </span>
           </p>
           <div className="flex flex-col items-start pl-12">
-            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3">
               <FaDollarSign />
               Cena: {current.cena}
             </p>
@@ -134,7 +132,7 @@ export default function Houses() {
             Szczegóły
           </a>
         </motion.div>
-        <div className="relative w-full p-5 flex items-center justify-center">
+        <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center">
           <div className="absolute top-0 left-0 h-[60%] w-[30%] border-t-[3px] border-l-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
 
           <div className="absolute bottom-0 right-0 h-[60%] w-[30%] border-b-[3px] border-r-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
@@ -162,12 +160,10 @@ export default function Houses() {
         </div>
       </div>
       {next && (
-        <div className="flex flex-row w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-40 space-x-56 z-10">
-          <div className=" space-y-4">
-            <p className="text-5xl font-semibold text-[#182B3C] text-center">
-              {next.nazwa}
-            </p>
-          </div>
+        <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10">
+          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+            {next.nazwa}
+          </p>
         </div>
       )}
     </section>

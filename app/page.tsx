@@ -1,5 +1,6 @@
 import AboutInvestment from "./components/AboutInvestment";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 import Gallery from "./components/Gallery";
 import Header from "./components/Header";
 import HomeSection from "./components/HomeSection";
@@ -19,7 +20,9 @@ export default function Home() {
         <Gallery />
         <Contact />
       </main>
-      <footer className=""></footer>
+      <footer className="">
+        <Footer />
+      </footer>
     </div>
   );
 }

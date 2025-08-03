@@ -132,7 +132,7 @@ export default function Houses() {
             Szczegóły
           </a>
         </motion.div>
-        <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center">
+        {/* <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center">
           <div className="absolute top-0 left-0 h-[60%] w-[30%] border-t-[3px] border-l-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
 
           <div className="absolute bottom-0 right-0 h-[60%] w-[30%] border-b-[3px] border-r-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
@@ -152,12 +152,12 @@ export default function Houses() {
                 unoptimized
               />
             </div>
-            {/* <div className="flex flex-row items-center justify-center gap-3 mt-4">
+            <div className="flex flex-row items-center justify-center gap-3 mt-4">
               <div className="w-3.5 h-3.5 rounded-full bg-[var(--themeBlueDark)]" />
               <div className="w-3.5 h-3.5 rounded-full bg-[var(--themeBlueLight)]" />
-            </div> */}
+            </div>
           </div>
-        </div>
+        </div> */}
       </div>
       {next && (
         <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10">

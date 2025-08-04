@@ -125,7 +125,9 @@ export default function Houses() {
             </p>
           </div>
           <a
-            href={"/"}
+            href={"/Rzuty/1a.jpg"}
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center justify-center gap-3 px-[100px] py-3 bg-[var(--themeBlueDark)] text-white text-4xl font-semibold w-fit rounded-[5px]"
           >
             <FaFile />

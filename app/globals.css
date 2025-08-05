@@ -26,3 +26,7 @@ body {
   color: var(--foreground);
   font-family: "Khand", sans-serif;
 }
+
+html {
+  @apply scroll-smooth;
+}

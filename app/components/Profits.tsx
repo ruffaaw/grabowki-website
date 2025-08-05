@@ -140,8 +140,13 @@ export default function Profits() {
 
             return (
               <div
-                key={offset}
+                key={i}
                 className={`flex items-center drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)] justify-center ${sizeClass}`}
+                onClick={() => {
+                  const newIndex =
+                    (currentIndex + offset + icons.length) % icons.length;
+                  setCurrentIndex(newIndex);
+                }}
               >
                 <Icon className="text-white w-full h-full" />
               </div>

@@ -56,7 +56,7 @@ export default function Header() {
       >
         {[
           { href: "#o-inwestycji", label: "O inwestycji" },
-          { href: "#lokalizacja", label: "Lokalizacja" },
+          // { href: "#lokalizacja", label: "Lokalizacja" },
           { href: "#profity", label: "Profity" },
           { href: "#domy", label: "Domy" },
           { href: "#galeria", label: "Galeria" },
@@ -108,13 +108,13 @@ export default function Header() {
             <p className="break-words max-w-full">O inwestycji</p>
           </Link>
 
-          <Link
+          {/* <Link
             href="#lokalizacja"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Lokalizacja</p>
-          </Link>
+          </Link> */}
           <Link
             href="#profity"
             className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "

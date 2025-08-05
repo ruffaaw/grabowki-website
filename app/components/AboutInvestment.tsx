@@ -5,7 +5,7 @@ export default function AboutInvestment() {
   return (
     <section
       id="o-inwestycji"
-      className="flex flex-col  py-16 bg-transparent bg-gradient-to-b from-[#D5EBF9] to-[#E8E8E8]"
+      className="flex flex-col  py-16 bg-transparent bg-gradient-to-b from-[#D5EBF9] to-[#E8E8E8] scroll-mt-14"
     >
       <h1 className="text-[40px] mb-5 font-medium text-black px-6 md:px-12">
         O INWESTYCJI

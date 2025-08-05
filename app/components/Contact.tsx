@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <section
       id="kontakt"
-      className="flex flex-col pb-14 md:pb-24 px-5 md:px-[70px] bg-transparent bg-linear-to-b from-[var(--mainBg)] from-[53%] to-[#ffffff] overflow-hidden"
+      className="flex flex-col pb-14 md:pb-24 px-5 md:px-[70px] bg-transparent bg-linear-to-b from-[var(--mainBg)] from-[53%] to-[#ffffff] scroll-mt-32 overflow-hidden "
     >
       <div className="flex flex-col md:flex-row items-start justify-between w-full h-full gap-16 md:gap-20">
         <div className="w-full h-full">

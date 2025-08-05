@@ -164,7 +164,7 @@ export default function Houses() {
         </div> */}
       </div>
       {next && (
-        <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10">
+        <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-b to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10">
           <p className="text-4xl md:text-5xl font-semibold text-[#182B3C] text-center">
             {next.nazwa}
           </p>

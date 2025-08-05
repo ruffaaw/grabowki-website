@@ -34,7 +34,7 @@ export default function Houses() {
   return (
     <section
       id="domy"
-      className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[var(--mainBg)] via-[#ffffff] via-50% to-[#24425C] scroll-mt-24"
+      className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[var(--mainBg)] via-[#ffffff] via-50% to-[#24425C] scroll-mt-24 md:scroll-mt-28"
     >
       <div className="flex flex-row items-center gap-5 w-full">
         <div className="w-full md:w-2/3 h-[5px] md:h-[8px] bg-[#182B3C]" />

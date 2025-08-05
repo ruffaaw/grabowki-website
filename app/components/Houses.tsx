@@ -53,11 +53,6 @@ export default function Houses() {
             priority={false}
             unoptimized
           />
-          {/* <button
-            className="absolute top-[20%] left-[30%] w-10 h-10 rounded-full bg-[var(--themeBlueDark)] opacity-60 hover:opacity-100 transition-all"
-            onClick={() => setCurrentId(0)}
-            title="Mieszkanie 1a"
-          /> */}
 
           {mieszkania.map((mieszkanie) => (
             <button
@@ -90,7 +85,7 @@ export default function Houses() {
         </div>
       )}
 
-      <div className="flex flex-row w-full bg-white py-5 md:justify-between items-center md:px-40 space-x-56 z-20 drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
+      <div className="flex flex-row w-full bg-white py-5 md:justify-between items-center pl-8 lg:pl-40 pr-20 xl:pr-40 gap-16 xl:gap-32 z-20 drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
         <motion.div
           key={currentId}
           initial={{ opacity: 0, y: 20 }}
@@ -136,33 +131,33 @@ export default function Houses() {
             Szczegóły
           </a>
         </motion.div>
-        {/* <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center">
-          <div className="absolute top-0 left-0 h-[60%] w-[30%] border-t-[3px] border-l-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
 
-          <div className="absolute bottom-0 right-0 h-[60%] w-[30%] border-b-[3px] border-r-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
+        <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center max-h-[370px] max-w-[670px]">
+          <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center max-h-[370px]">
+            <div className="absolute top-0 left-0 h-[60%] w-[30%] border-t-[3px] border-l-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
 
-          <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-2 bg-white font-semibold text-5xl text-black">
-            {current.id % 2 ? "piętro" : "parter"}
-          </div>
+            <div className="absolute bottom-0 right-0 h-[60%] w-[30%] border-b-[3px] border-r-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
 
-          <div className="flex flex-col items-center aspect-[16/9] border-[3px] border-transparent my-7">
-            <div className="relative aspect-[16/9] flex-1 max-w-[400px] h-[236px]">
-              <Image
-                src="/visualization.png"
-                alt="Zdjęcie inwestycji"
-                fill
-                className="object-contain"
-                priority={false}
-                unoptimized
-              />
+            <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-2 bg-white font-semibold text-4xl md:text-5xl text-black">
+              {current.id % 2 ? "piętro" : "parter"}
             </div>
-            <div className="flex flex-row items-center justify-center gap-3 mt-4">
-              <div className="w-3.5 h-3.5 rounded-full bg-[var(--themeBlueDark)]" />
-              <div className="w-3.5 h-3.5 rounded-full bg-[var(--themeBlueLight)]" />
+
+            <div className="flex flex-col items-center border-[3px] border-transparent w-full space-y-2 py-3">
+              <div className="relative aspect-[2425/1036] flex-1 h-full w-full max-h-[250px]">
+                <Image
+                  src={"/Rzut_z_gory_1a.jpg"}
+                  alt="Zdjęcie inwestycji"
+                  fill
+                  className="object-contain"
+                  priority={false}
+                  unoptimized
+                />
+              </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
+
       {next && (
         <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-b to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10">
           <p className="text-4xl md:text-5xl font-semibold text-[#182B3C] text-center">

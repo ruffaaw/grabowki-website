@@ -51,7 +51,7 @@ export default function Gallery() {
   return (
     <section
       id="galeria"
-      className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[#24425C] from-[38%] to-[var(--mainBg)] to-[74%] scroll-mt-24"
+      className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[#24425C] from-[38%] to-[var(--mainBg)] to-[74%] scroll-mt-24 md:scroll-mt-28"
     >
       <div className="flex flex-row items-center gap-5 w-full">
         <div className="w-full md:w-1/5 h-[5px] md:h-[8px] bg-white" />

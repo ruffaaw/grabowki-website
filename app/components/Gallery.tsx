@@ -54,9 +54,11 @@ export default function Gallery() {
       className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[#24425C] from-[38%] to-[var(--mainBg)] to-[74%] overflow-hidden"
     >
       <div className="flex flex-row items-center gap-5 w-full">
-        <div className="w-1/5 h-[8px] bg-white" />
-        <h1 className="text-8xl font-semibold text-white">Galeria</h1>
-        <div className="w-4/5 h-[8px] bg-white" />
+        <div className="w-full md:w-1/5 h-[5px] md:h-[8px] bg-white" />
+        <h1 className="text-5xl md:text-8xl font-semibold text-white">
+          Galeria
+        </h1>
+        <div className="w-full md:w-4/5 h-[5px] md:h-[8px] bg-white" />
       </div>
       <div className="relative w-full max-w-7xl mx-auto flex flex-col items-center gap-4 py-10">
         <div className="relative w-full h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[70vh] xl:h-[80vh] flex items-center justify-center overflow-visible">

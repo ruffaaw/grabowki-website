@@ -37,9 +37,11 @@ export default function Houses() {
       className="flex flex-col pb-24 bg-transparent bg-linear-to-b from-[var(--mainBg)] via-[#ffffff] via-50% to-[#24425C]"
     >
       <div className="flex flex-row items-center gap-5 w-full">
-        <div className="w-full md:w-2/3 h-[8px] bg-[#182B3C]" />
-        <h1 className="text-8xl font-semibold text-[#182B3C]">LOKALE</h1>
-        <div className="w-full md:w-1/5 h-[8px] bg-[#182B3C]" />
+        <div className="w-full md:w-2/3 h-[5px] md:h-[8px] bg-[#182B3C]" />
+        <h1 className="text-5xl md:text-8xl font-semibold text-[#182B3C]">
+          LOKALE
+        </h1>
+        <div className="w-full md:w-1/5 h-[5px] md:h-[8px] bg-[#182B3C]" />
       </div>
       <div className="md:pl-9 mt-10">
         <div className="relative aspect-[16/9] flex-1 w-full h-screen">
@@ -82,7 +84,7 @@ export default function Houses() {
 
       {previous && (
         <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10 -mt-28">
-          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+          <p className="text-4xl md:text-5xl font-semibold text-[#182B3C] text-center">
             {previous.nazwa}
           </p>
         </div>
@@ -97,36 +99,36 @@ export default function Houses() {
           transition={{ duration: 0.4 }}
           className="space-y-1 md:space-y-4 "
         >
-          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+          <p className="text-4xl md:text-5xl font-semibold text-[#182B3C] text-center">
             {current.nazwa}
           </p>
-          <p className="text-4xl font-semibold text-[#182B3C] text-center">
+          <p className="text-3xl md:text-4xl font-semibold text-[#182B3C] text-center">
             Status:{" "}
             <span className="text-[var(--themeBlueLight)]">
               {getStatusText(current.status)}
             </span>
           </p>
           <div className="flex flex-col items-start pl-12">
-            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3">
+            <p className="text-2xl md:text-[32px] font-semibold text-[#182B3C] flex items-center gap-3">
               <FaDollarSign />
               Cena: {current.cena}
             </p>
-            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+            <p className="text-2xl md:text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
               <FaHouse />
               Metraż: {current.metraz}
             </p>
-            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+            <p className="text-2xl md:text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
               <FaBed />
               Pokoje: {current.pokoje}
             </p>
-            <p className="text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
+            <p className="text-2xl md:text-[32px] font-semibold text-[#182B3C] flex items-center gap-3 ">
               <FaLeaf />
               Ogródek: {current.ogrodek}
             </p>
           </div>
           <a
             href={"/"}
-            className="flex items-center justify-center gap-3 px-[100px] py-3 bg-[var(--themeBlueDark)] text-white text-4xl font-semibold w-fit rounded-[5px]"
+            className="flex items-center justify-center gap-3 px-[100px] py-3 bg-[var(--themeBlueDark)] text-white text-3xl md:text-4xl font-semibold w-fit rounded-[5px]"
           >
             <FaFile />
             Szczegóły
@@ -161,7 +163,7 @@ export default function Houses() {
       </div>
       {next && (
         <div className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-5 justify-between items-center px-8 md:px-40 space-x-56 z-10">
-          <p className="text-5xl font-semibold text-[#182B3C] text-center">
+          <p className="text-4xl md:text-5xl font-semibold text-[#182B3C] text-center">
             {next.nazwa}
           </p>
         </div>

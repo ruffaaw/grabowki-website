@@ -8,16 +8,16 @@ export default function Contact() {
       id="kontakt"
       className="flex flex-col pb-14 md:pb-24 px-5 md:px-[70px] bg-transparent bg-linear-to-b from-[var(--mainBg)] from-[53%] to-[#ffffff] overflow-hidden"
     >
-      <div className="flex flex-col md:flex-row items-start justify-between w-full h-full gap-20">
+      <div className="flex flex-col md:flex-row items-start justify-between w-full h-full gap-16 md:gap-20">
         <div className="w-full h-full">
-          <h1 className="text-6xl font-semibold text-[var(--themeBlueDark)] ml-3 md:ml-6">
+          <h1 className="text-4xl md:text-6xl font-semibold text-[var(--themeBlueDark)] ml-3 md:ml-6">
             kontakt
           </h1>
           <div className="relative flex flex-col items-start pt-6 pl-6 md:pt-12 md:pl-12 w-full">
             <div className="absolute top-0 left-0 w-full md:w-3/5 h-[3px] bg-[var(--themeBlueDark)]" />
             <div className="absolute top-0 left-0 h-10/12 md:h-2/5 w-[3px] bg-[var(--themeBlueDark)]" />
             <div className="flex flex-col space-y-7">
-              <h2 className="text-[40px] text-black font-semibold text-left md:text-center">
+              <h2 className="text-4xl md:text-[40px] text-black font-semibold text-left md:text-center">
                 Masz pytania? Chętnie na nie odpowiemy!
               </h2>
               <div className="flex flex-col space-y-7 md:ml-7">
@@ -92,7 +92,7 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="flex flex-col items-start justify-between w-full h-full space-y-7 mt-[60px]">
+        <div className="flex flex-col items-start justify-between w-full h-full space-y-7 md:mt-[60px]">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.7441043963518!2d20.02706173499543!3d49.973908505600825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471642330a83b067%3A0x9e1fd6b5ff755710!2s32-020%20Grab%C3%B3wki!5e1!3m2!1spl!2spl!4v1754216196342!5m2!1spl!2spl"
             width="600"

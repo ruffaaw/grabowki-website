@@ -19,7 +19,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "64,17 m²",
     pokoje: 4,
     ogrodek: "121,59 m²",
-    x: 38,
+    x: 42,
     y: 70,
   },
   {
@@ -30,7 +30,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 39,
+    x: 43,
     y: 65,
   },
   {
@@ -41,7 +41,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 55.5,
+    x: 53.5,
     y: 65,
   },
   {
@@ -52,8 +52,8 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "64,17 m²",
     pokoje: 4,
     ogrodek: "121,59 m²",
-    x: 57,
-    y: 60,
+    x: 54.5,
+    y: 60.6,
   },
   {
     id: 4,
@@ -63,8 +63,8 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 36,
-    y: 68,
+    x: 40.5,
+    y: 67.5,
   },
   {
     id: 5,
@@ -74,7 +74,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 37,
+    x: 41.5,
     y: 63,
   },
   {
@@ -85,7 +85,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "64,17 m²",
     pokoje: 4,
     ogrodek: "121,59 m²",
-    x: 53,
+    x: 52,
     y: 63,
   },
   {
@@ -96,8 +96,8 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 54,
-    y: 58.5,
+    x: 52.5,
+    y: 59,
   },
   {
     id: 8,
@@ -107,7 +107,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 33.5,
+    x: 39,
     y: 65,
   },
   {
@@ -118,7 +118,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "64,17 m²",
     pokoje: 4,
     ogrodek: "121,59 m²",
-    x: 34.5,
+    x: 40,
     y: 61,
   },
   {
@@ -129,7 +129,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 48,
+    x: 49,
     y: 60,
   },
   {
@@ -151,7 +151,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "64,17 m²",
     pokoje: 4,
     ogrodek: "121,59 m²",
-    x: 31.5,
+    x: 37.5,
     y: 63,
   },
   {
@@ -162,7 +162,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 32.5,
+    x: 38.5,
     y: 59,
   },
   {
@@ -173,8 +173,8 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 46.5,
-    y: 58,
+    x: 47.5,
+    y: 58.5,
   },
   {
     id: 15,
@@ -184,7 +184,7 @@ export const mieszkania: Mieszkanie[] = [
     metraz: "60,01 m²",
     pokoje: 3,
     ogrodek: "100,12 m²",
-    x: 47,
-    y: 54,
+    x: 48,
+    y: 54.5,
   },
 ];

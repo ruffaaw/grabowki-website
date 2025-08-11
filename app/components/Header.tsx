@@ -78,7 +78,7 @@ export default function Header() {
         </Link>
       </nav>
       <button
-        className="xl:hidden flex items-center text-white px-6 lg:px-16 py-4 lg:py-5"
+        className="xl:hidden flex items-center text-white px-6 lg:px-16 py-4 lg:py-5 cursor-pointer"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         data-aos="zoom-out"
         data-aos-duration="1000"
@@ -102,7 +102,7 @@ export default function Header() {
         <div className="fixed flex flex-col items-center top-[80px] bg-[var(--themeBlueLight)] z-30 w-screen h-auto ">
           <Link
             href="#o-inwestycji"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
+            className=" text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">O inwestycji</p>
@@ -117,28 +117,28 @@ export default function Header() {
           </Link> */}
           <Link
             href="#profity"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
+            className=" text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  "
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Profity</p>
           </Link>
           <Link
             href="#domy"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
+            className=" text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Domy</p>
           </Link>
           <Link
             href="#galeria"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
+            className=" text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Galeria</p>
           </Link>
           <Link
             href="#kontakt"
-            className="text-green-spring-100 text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
+            className=" text-xl w-full py-5 flex justify-center hover:bg-[var(--themeBlueDark)]  break-words max-w-full"
             onClick={() => setIsMenuOpen(false)}
           >
             <p className="break-words max-w-full">Kontakt</p>

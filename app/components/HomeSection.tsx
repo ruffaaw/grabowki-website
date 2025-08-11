@@ -15,7 +15,7 @@ export default function HomeSection() {
         </h1>
         <a
           href="#domy"
-          className="bg-[var(--themeBlueDark)] text-white text-3xl md:text-4xl lg:text-[40px] px-10 py-3 hover:bg-gray-200 transition drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] text-center "
+          className="bg-[var(--themeBlueDark)] text-white text-3xl md:text-4xl lg:text-[40px] px-10 py-3 hover:bg-[var(--themeBlueLight)] hover:scale-110 transition drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] text-center "
         >
           Zobacz ofertę
         </a>

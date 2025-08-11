@@ -59,7 +59,7 @@ export default function AboutInvestment() {
               i&nbsp;zdrowiu mieszkańców. Każde mieszkanie oferuje dobrze
               doświetlone wnętrza oraz przestrzeń do relaksu – zarówno wewnątrz,
               jak i&nbsp;na zewnątrz. Przydomowe ogródki pozwalają cieszyć się
-              własnym zielonym zakątkiem, idealnym do odpoczynku .
+              własnym zielonym zakątkiem, idealnym do odpoczynku.
             </p>
           </div>
         </div>
@@ -97,7 +97,7 @@ export default function AboutInvestment() {
           </h2>
           <a
             href="#kontakt"
-            className="bg-[var(--themeBlueDark)] text-white text-2xl md:text-3xl lg:text-[32px] px-8 md:px-24 py-3 font-semibold hover:bg-gray-200 transition drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] flex items-center gap-4 w-fit"
+            className="bg-[var(--themeBlueDark)] text-white text-2xl md:text-3xl lg:text-[32px] px-8 md:px-24 py-3 font-semibold hover:bg-[var(--themeBlueLight)] hover:scale-110 transition drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] flex items-center gap-4 w-fit"
           >
             <FaEnvelope className="text-3xl" />
             Skontaktuj się z&nbsp;nami

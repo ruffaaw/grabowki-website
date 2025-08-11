@@ -64,7 +64,7 @@ export default function Gallery() {
         <div className="relative w-full h-[30vh] sm:h-[50vh] md:h-[70vh] lg:h-[70vh] xl:h-[80vh] flex items-center justify-center overflow-visible">
           <button
             onClick={prevImage}
-            className="absolute left-0 z-20 text-white bg-black/40 hover:bg-white hover:text-black rounded-full w-14 h-14 flex items-center justify-center"
+            className="absolute left-0 z-20 text-white bg-black/40 hover:bg-white hover:text-black rounded-full w-14 h-14 flex items-center justify-center cursor-pointer"
           >
             <FaChevronLeft size={32} />
           </button>
@@ -97,7 +97,7 @@ export default function Gallery() {
 
           <button
             onClick={() => nextImage()}
-            className="absolute right-0 z-10 text-white bg-black/40 hover:bg-white hover:text-black rounded-full w-14 h-14 flex items-center justify-center"
+            className="absolute right-0 z-10 text-white bg-black/40 hover:bg-white hover:text-black rounded-full w-14 h-14 flex items-center justify-center cursor-pointer"
           >
             <FaChevronRight size={32} />
           </button>

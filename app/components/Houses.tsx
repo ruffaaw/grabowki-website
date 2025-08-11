@@ -12,7 +12,8 @@ export default function Houses() {
   const current = mieszkania[currentId];
   const previous =
     mieszkania[(currentId - 1 + mieszkania.length) % mieszkania.length] || null;
-  const next = mieszkania[currentId + 1] || null;
+  const next =
+    mieszkania[(currentId + 1 + mieszkania.length) % mieszkania.length] || null;
 
   const getStatusText = (status: number) => {
     switch (status) {
@@ -59,12 +60,18 @@ export default function Houses() {
               <button
                 key={mieszkanie.id}
                 className={`absolute ${
-                  mieszkanie.status === 0
+                  mieszkanie.id === currentId
+                    ? "bg-[var(--themeBlueDark)] text-white drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]"
+                    : mieszkanie.status === 0
                     ? "bg-red-500"
                     : mieszkanie.status === 1
                     ? "bg-green-500"
                     : "bg-yellow-500"
-                } text-black bg-opacity-75 hover:bg-opacity-100 rounded-full w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 flex items-center justify-center font-bold text-xs md:text-base cursor-pointer transition-all z-10`}
+                } ${
+                  mieszkanie.id === currentId
+                    ? "w-6 h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 z-50 text-base md:text-xl"
+                    : "w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-xs md:text-base"
+                } text-black bg-opacity-75 hover:bg-opacity-100 rounded-full flex items-center justify-center font-bold cursor-pointer transition-all z-10 `}
                 style={{
                   left: `${mieszkanie.x}%`,
                   top: `${mieszkanie.y}%`,

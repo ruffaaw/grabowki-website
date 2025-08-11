@@ -80,7 +80,7 @@ export default function Houses() {
         <div className="flex flex-col w-full lg:w-2/5">
           {previous && (
             <div
-              className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-1 md:py-3 justify-between items-center px-8 space-x-56 z-10 max-md:-mt-12 max-lg:-mt-20"
+              className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-1 md:py-3 justify-between items-center px-8 space-x-56 z-10 max-md:-mt-12 max-lg:-mt-20 cursor-pointer"
               onClick={() => {
                 setCurrentId(previous.id);
               }}
@@ -128,10 +128,10 @@ export default function Houses() {
                 </p>
               </div>
               <a
-                href={"/Rzuty/1a.jpg"}
+                href={currentId % 2 === 0 ? "/Rzuty/1a.jpg" : "/Rzuty/1b.jpg"}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-3 px-[100px] py-2 lg:py-3 bg-[var(--themeBlueDark)] text-white text-2xl md:text-4xl font-semibold w-fit rounded-[5px]"
+                className="flex items-center justify-center gap-3 px-[100px] py-2 lg:py-3 bg-[var(--themeBlueDark)] hover:bg-[var(--themeBlueLight)] hover:scale-110 text-white text-2xl md:text-4xl font-semibold w-fit rounded-[5px]"
               >
                 <FaFile />
                 Szczegóły
@@ -166,7 +166,7 @@ export default function Houses() {
 
           {next && (
             <div
-              className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-b to-[#999999] from-[80%] from-[#FFFFFF] py-1 md:py-3 justify-between items-center px-8 space-x-56 z-10"
+              className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-b to-[#999999] from-[80%] from-[#FFFFFF] py-1 md:py-3 justify-between items-center px-8 space-x-56 z-10 cursor-pointer"
               onClick={() => {
                 setCurrentId(next.id);
               }}

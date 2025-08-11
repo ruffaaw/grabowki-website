@@ -83,15 +83,21 @@ const icons = [
 export default function Profits() {
   const [currentIndex, setCurrentIndex] = useState(2);
   const [isMobile, setIsMobile] = useState(false);
+  const [autoSlideTrigger, setAutoSlideTrigger] = useState(0);
+
+  const handleChangeIndex = (newIndex: number) => {
+    setCurrentIndex(newIndex);
+    setAutoSlideTrigger((t) => t + 1);
+  };
 
   const bind = useDrag(
     ({ movement: [mx, my], last }) => {
       const move = isMobile ? mx : my;
       if (Math.abs(move) > (isMobile ? 20 : 50) && last) {
         if (move > 0) {
-          setCurrentIndex((prev) => (prev - 1 + icons.length) % icons.length);
+          handleChangeIndex((currentIndex - 1 + icons.length) % icons.length);
         } else {
-          setCurrentIndex((prev) => (prev + 1) % icons.length);
+          handleChangeIndex((currentIndex + 1) % icons.length);
         }
       }
     },
@@ -112,12 +118,20 @@ export default function Profits() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % icons.length);
+    }, 10000);
+
+    return () => clearInterval(interval);
+  }, [autoSlideTrigger]);
+
   return (
     <section
       id="profity"
       className="flex flex-col max-md:px-6 md:pr-12 max-md:pb-24 md:py-24 bg-transparent bg-linear-to-b to-[#D5EBF9] from-[#E8E8E8] md:border-t-[1px] md:border-[#182B3C] scroll-mt-20"
     >
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-md:h-[40vh]">
         <div
           {...bind()}
           className="flex flex-row md:flex-col items-start cursor-grab select-none active:cursor-grabbing"
@@ -145,7 +159,7 @@ export default function Profits() {
                 onClick={() => {
                   const newIndex =
                     (currentIndex + offset + icons.length) % icons.length;
-                  setCurrentIndex(newIndex);
+                  handleChangeIndex(newIndex);
                 }}
               >
                 <Icon className="text-white w-full h-full" />

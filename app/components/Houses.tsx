@@ -51,7 +51,7 @@ export default function Houses() {
               src="/dron111.png"
               alt="Zdjęcie inwestycji"
               fill
-              className="object-cover"
+              className="object-contain"
               priority={false}
               unoptimized
             />
@@ -105,7 +105,7 @@ export default function Houses() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="space-y-1 md:space-y-4 "
+              className="space-y-1 md:space-y-4 flex flex-col items-center"
             >
               <p className="text-3xl md:text-5xl font-semibold text-[#182B3C] text-center">
                 {current.nazwa}
@@ -116,7 +116,7 @@ export default function Houses() {
                   {getStatusText(current.status)}
                 </span>
               </p>
-              <div className="flex flex-col items-start pl-12">
+              <div className="flex flex-col items-start">
                 <p className="text-xl md:text-[32px] font-semibold text-[#182B3C] flex items-center gap-3">
                   <FaDollarSign />
                   Cena: {current.cena}

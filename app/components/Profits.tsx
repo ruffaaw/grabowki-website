@@ -131,7 +131,7 @@ export default function Profits() {
       id="profity"
       className="flex flex-col max-md:px-6 md:pr-12 max-md:pb-24 md:py-24 bg-transparent bg-linear-to-b to-[#D5EBF9] from-[#E8E8E8] md:border-t-[1px] md:border-[#182B3C] scroll-mt-20"
     >
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-md:h-[40vh]">
+      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-md:h-[70vh]">
         <div
           {...bind()}
           className="flex flex-row md:flex-col items-start cursor-grab select-none active:cursor-grabbing"
@@ -168,7 +168,7 @@ export default function Profits() {
           })}
         </div>
 
-        <div className="flex flex-col items-center justify-center w-full h-full text-center md:text-left">
+        <div className="flex flex-col items-center justify-start w-full h-full text-center md:text-left">
           <h2 className="text-5xl md:text-6xl font-semibold bg-gradient-to-r from-[#182B3C] to-[#4174A2] bg-clip-text text-transparent w-fit">
             {getIconAt(0).label}
           </h2>

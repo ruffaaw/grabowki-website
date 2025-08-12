@@ -144,31 +144,6 @@ export default function Houses() {
                 Szczegóły
               </a>
             </motion.div>
-
-            {/* <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center max-h-[370px] max-w-[670px]">
-              <div className="max-lg:hidden relative w-full p-5 flex items-center justify-center max-h-[370px]">
-                <div className="absolute top-0 left-0 h-[60%] w-[30%] border-t-[3px] border-l-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
-
-                <div className="absolute bottom-0 right-0 h-[60%] w-[30%] border-b-[3px] border-r-[3px] border-[var(--themeBlueDark)] pointer-events-none" />
-
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 px-2 bg-white font-semibold text-4xl md:text-5xl text-black">
-                  {current.id % 2 ? "piętro" : "parter"}
-                </div>
-
-                <div className="flex flex-col items-center border-[3px] border-transparent w-full space-y-2 py-3">
-                  <div className="relative aspect-[16/9] flex-1 h-full w-full max-h-[250px]">
-                    <Image
-                      src={"/Rzut_z_gory_1a.jpg"}
-                      alt="Zdjęcie inwestycji"
-                      fill
-                      className="object-contain"
-                      priority={false}
-                      unoptimized
-                    />
-                  </div>
-                </div>
-              </div>
-            </div> */}
           </div>
 
           {next && (

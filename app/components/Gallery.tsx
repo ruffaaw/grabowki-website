@@ -81,7 +81,7 @@ export default function Gallery() {
               return (
                 <motion.div
                   key={img.url}
-                  className={`absolute transition-all duration-500 ease-out ${position} rounded-lg aspect-[16/9] w-full `}
+                  className={`absolute transition-all duration-1000 ease-out ${position} rounded-lg aspect-[16/9] w-full `}
                 >
                   <Image
                     src={img.url}

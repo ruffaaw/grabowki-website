@@ -8,7 +8,7 @@ export default function AboutInvestment() {
   return (
     <section
       id="o-inwestycji"
-      className="flex flex-col  py-16 bg-transparent bg-gradient-to-b from-[#D5EBF9] to-[#E8E8E8] scroll-mt-14 drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)]"
+      className="flex flex-col  py-16 bg-transparent bg-gradient-to-b from-[#D5EBF9] to-[#E8E8E8] scroll-mt-14 md:drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)]"
     >
       <motion.h1
         variants={fadeIn("up", 0)}

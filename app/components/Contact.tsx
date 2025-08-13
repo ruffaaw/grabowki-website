@@ -1,6 +1,9 @@
+"use client";
 import Image from "next/image";
 import { FaEnvelope, FaMobile, FaPhone } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { fadeIn } from "../animations/animations";
 
 export default function Contact() {
   return (
@@ -10,18 +13,48 @@ export default function Contact() {
     >
       <div className="flex flex-col md:flex-row items-start justify-between w-full h-full gap-16 md:gap-20">
         <div className="w-full h-full">
-          <h1 className="text-4xl md:text-6xl font-semibold text-[var(--themeBlueDark)] ml-3 md:ml-6">
+          <motion.h1
+            variants={fadeIn("down", 0)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="text-4xl md:text-6xl font-semibold text-[var(--themeBlueDark)] ml-3 md:ml-6"
+          >
             kontakt
-          </h1>
+          </motion.h1>
           <div className="relative flex flex-col items-start pt-6 pl-6 md:pt-12 md:pl-12 w-full">
-            <div className="absolute top-0 left-0 w-full md:w-3/5 h-[3px] bg-[var(--themeBlueDark)]" />
-            <div className="absolute top-0 left-0 h-10/12 md:h-2/5 w-[3px] bg-[var(--themeBlueDark)]" />
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="absolute top-0 left-0 w-full md:w-3/5 h-[3px] bg-[var(--themeBlueDark)] origin-left"
+            />
+            <motion.div
+              initial={{ scaleY: 0 }}
+              animate={{ scaleY: 1 }}
+              transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="absolute top-0 left-0 h-10/12 md:h-2/5 w-[3px] bg-[var(--themeBlueDark)] origin-top"
+            />
             <div className="flex flex-col space-y-7">
-              <h2 className="text-4xl md:text-[40px] text-black font-semibold text-left md:text-center">
+              <motion.h2
+                variants={fadeIn("down", 0.4)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+                className="text-4xl md:text-[40px] text-black font-semibold text-left md:text-center"
+              >
                 Masz pytania? Chętnie na nie odpowiemy!
-              </h2>
+              </motion.h2>
               <div className="flex flex-col space-y-7 md:ml-7">
-                <div className="space-y-2 w-full">
+                <motion.div
+                  variants={fadeIn("down", 0.6)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="space-y-2 w-full"
+                >
                   <p className="text-xl font-semibold text-black ml-2">
                     Imię i nazwisko
                   </p>
@@ -30,9 +63,15 @@ export default function Contact() {
                     className="w-full px-3 py-2 bg-white rounded-[5px] text-xl placeholder-[#BFBFBF] text-black focus:outline-none focus:ring-0 focus:border-none"
                     placeholder="Wpisz swoje imię i nazwisko"
                   />
-                </div>
+                </motion.div>
                 <div className="flex flex-col md:flex-row justify-between gap-7 md:gap-10">
-                  <div className="space-y-2 w-full">
+                  <motion.div
+                    variants={fadeIn("right", 0.6)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="space-y-2 w-full"
+                  >
                     <p className="text-xl font-semibold text-black ml-2">
                       Adres e-mail
                     </p>
@@ -41,8 +80,14 @@ export default function Contact() {
                       className="w-full px-3 py-2 bg-white rounded-[5px] text-xl placeholder-[#BFBFBF] text-black focus:outline-none focus:ring-0 focus:border-none"
                       placeholder="Wpisz swój adres e-mail"
                     />
-                  </div>
-                  <div className="space-y-2 w-full">
+                  </motion.div>
+                  <motion.div
+                    variants={fadeIn("left", 0.6)}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, amount: 0.3 }}
+                    className="space-y-2 w-full"
+                  >
                     <p className="text-xl font-semibold text-black ml-2">
                       Telefon
                     </p>
@@ -51,9 +96,15 @@ export default function Contact() {
                       className="w-full px-3 py-2 bg-white rounded-[5px] text-xl placeholder-[#BFBFBF] text-black focus:outline-none focus:ring-0 focus:border-none"
                       placeholder="Wpisz swój numer telefonu"
                     />
-                  </div>
+                  </motion.div>
                 </div>
-                <div className="space-y-2">
+                <motion.div
+                  variants={fadeIn("up", 0.6)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="space-y-2"
+                >
                   <p className="text-xl font-semibold text-black ml-2">
                     Treść wiadomości
                   </p>
@@ -62,8 +113,14 @@ export default function Contact() {
                     placeholder="Wpisz treść wiadomości"
                     rows={3}
                   />
-                </div>
-                <div className="md:ml-5">
+                </motion.div>
+                <motion.div
+                  variants={fadeIn("up", 0.6)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="md:ml-5"
+                >
                   <label className="flex items-center">
                     <input
                       type="checkbox"
@@ -83,17 +140,27 @@ export default function Contact() {
                       </a>
                     </span>
                   </label>
-                </div>
-                <button className="text-2xl font-semibold text-white bg-[var(--themeBlueDark)] rounded-[5px] py-3 cursor-pointer">
+                </motion.div>
+                <motion.button
+                  variants={fadeIn("up", 0.6)}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.3 }}
+                  className="text-2xl font-semibold text-white bg-[var(--themeBlueDark)] rounded-[5px] py-3 cursor-pointer"
+                >
                   Wyślij
-                </button>
+                </motion.button>
               </div>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col items-start justify-between w-full h-full space-y-7 md:mt-[60px]">
-          <iframe
+          <motion.iframe
+            variants={fadeIn("down", 0.4)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.7441043963518!2d20.02706173499543!3d49.973908505600825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471642330a83b067%3A0x9e1fd6b5ff755710!2s32-020%20Grab%C3%B3wki!5e1!3m2!1spl!2spl!4v1754216196342!5m2!1spl!2spl"
             width="600"
             height="435"
@@ -102,10 +169,14 @@ export default function Contact() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-          ></iframe>
+          ></motion.iframe>
           <div className="flex flex-row justify-between items-center w-full max-lg:space-y-4">
             <div className="flex flex-col md:flex-row justify-center items-center gap-6 w-full ">
-              <a
+              <motion.a
+                variants={fadeIn("down", 0.4)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
                 href="https://www.n20.pl/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -117,8 +188,14 @@ export default function Contact() {
                   width={255}
                   height={160}
                 />
-              </a>
-              <div className="flex max-lg:items-center flex-col text-center lg:text-left font-semibold text-black max-w-md">
+              </motion.a>
+              <motion.div
+                variants={fadeIn("up", 0.4)}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.3 }}
+                className="flex max-lg:items-center flex-col text-center lg:text-left font-semibold text-black max-w-md"
+              >
                 <h2 className="text-xl md:text-2xl mb-3">
                   Kontakt biura nieruchomości
                 </h2>
@@ -142,7 +219,7 @@ export default function Contact() {
                   <FaLocationDot className="text-orange-500 mr-2" />
                   Plac Wolnica 13/21, 31-060 Kraków
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>

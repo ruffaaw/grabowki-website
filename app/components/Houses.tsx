@@ -2,9 +2,17 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { FaBed, FaDollarSign, FaFile, FaLeaf } from "react-icons/fa";
+import {
+  FaArrowDown,
+  FaArrowUp,
+  FaBed,
+  FaDollarSign,
+  FaFile,
+  FaLeaf,
+} from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
 import { mieszkania } from "../data/apartmentsData";
+import { useSwipeable } from "react-swipeable";
 
 export default function Houses() {
   const [currentId, setCurrentId] = useState(1);
@@ -31,6 +39,17 @@ export default function Houses() {
   const getNumberApartments = (apartment: string) => {
     return apartment.replace("Mieszkanie ", "");
   };
+
+  const handlers = useSwipeable({
+    onSwipedUp: () => {
+      if (next) setCurrentId(next.id);
+    },
+    onSwipedDown: () => {
+      if (previous) setCurrentId(previous.id);
+    },
+    preventScrollOnSwipe: true,
+    trackTouch: true,
+  });
 
   return (
     <section
@@ -84,13 +103,23 @@ export default function Houses() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col w-full lg:w-2/5">
+        <div
+          {...handlers}
+          className="flex flex-col w-full lg:w-2/5 touch-pan-y"
+        >
+          <div className="max-lg:hidden flex items-center justify-center w-full pb-2">
+            <button
+              className="p-3 bg-[var(--themeBlueDark)] hover:bg-[var(--themeBlueLight)] rounded-full text-white shadow-md cursor-pointer w-fit"
+              onClick={() => previous && setCurrentId(previous.id)}
+            >
+              <FaArrowUp />
+            </button>
+          </div>
+
           {previous && (
             <div
               className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-t to-[#999999] from-[80%] from-[#FFFFFF] py-1 md:py-3 justify-between items-center px-8 space-x-56 z-10 max-md:-mt-12 max-lg:-mt-20 cursor-pointer"
-              onClick={() => {
-                setCurrentId(previous.id);
-              }}
+              onClick={() => previous && setCurrentId(previous.id)}
             >
               <p className="text-3xl md:text-5xl font-semibold text-[#182B3C] text-center">
                 {previous.nazwa}
@@ -149,15 +178,22 @@ export default function Houses() {
           {next && (
             <div
               className="flex flex-row w-[90%] md:w-[97%] bg-transparent bg-linear-to-b to-[#999999] from-[80%] from-[#FFFFFF] py-1 md:py-3 justify-between items-center px-8 space-x-56 z-10 cursor-pointer"
-              onClick={() => {
-                setCurrentId(next.id);
-              }}
+              onClick={() => next && setCurrentId(next.id)}
             >
               <p className="text-3xl md:text-5xl font-semibold text-[#182B3C] text-center">
                 {next.nazwa}
               </p>
             </div>
           )}
+
+          <div className="max-lg:hidden flex items-center justify-center w-full pt-2">
+            <button
+              className="p-3 bg-[var(--themeBlueDark)] hover:bg-[var(--themeBlueLight)] rounded-full text-white shadow-md cursor-pointer w-fit"
+              onClick={() => next && setCurrentId(next.id)}
+            >
+              <FaArrowDown />
+            </button>
+          </div>
         </div>
       </div>
     </section>

@@ -105,7 +105,7 @@ export default function Houses() {
                 key={mieszkanie.id}
                 initial={{ scale: 0, opacity: 0 }}
                 whileInView={{ scale: 1, opacity: 1 }}
-                transition={{ delay: 0.5, ease: "easeInOut" }}
+                transition={{ delay: 0.5, ease: "easeOut" }}
                 whileHover={{ zIndex: 20 }}
                 viewport={{ once: true, amount: 0.3 }}
                 className={`absolute ${

@@ -4,6 +4,8 @@ import { useDrag } from "@use-gesture/react";
 import clsx from "clsx";
 import { FaBriefcase, FaBus, FaLeaf, FaRoad } from "react-icons/fa";
 import { FaShop } from "react-icons/fa6";
+import { motion } from "framer-motion";
+import { fadeIn } from "../animations/animations";
 
 const icons = [
   {
@@ -132,50 +134,63 @@ export default function Profits() {
       className="flex flex-col max-md:px-6 md:pr-12 max-md:pb-24 md:py-24 bg-transparent bg-linear-to-b to-[#D5EBF9] from-[#E8E8E8] md:border-t-[1px] md:border-[#182B3C] scroll-mt-20"
     >
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-md:h-[100vh]">
-        <div
-          {...bind()}
-          className="flex flex-row md:flex-col items-start cursor-grab select-none active:cursor-grabbing"
-          style={{ touchAction: "none" }}
+        <motion.div
+          variants={fadeIn("down", 0)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
         >
-          {[-2, -1, 0, 1, 2].map((offset, i) => {
-            const { Icon } = getIconAt(offset);
-            const sizeClass = clsx(
-              offset === -2 &&
-                "bg-transparent bg-gradient-to-r md:bg-gradient-to-b from-[#649BC7] to-[#314C61] p-2 md:p-5 flex items-center justify-center w-12 h-12 md:w-24 md:h-24 max-md:-mr-4 md:-mb-10 z-0 md:rounded-r-sm rounded-b-[5px]",
-              offset === -1 &&
-                "bg-transparent bg-gradient-to-r md:bg-gradient-to-b from-[#649BC7] to-[#314C61] p-3 md:p-5 flex items-center justify-center w-20 h-20 md:w-40 md:h-40 md:-mb-8 z-10 md:rounded-r-sm rounded-b-[5px]",
-              offset === 0 &&
-                "bg-transparent bg-gradient-to-b md:bg-gradient-to-r from-[#5F93BD] to-[#000000] to-15% p-5 flex items-center justify-center w-28 h-28 md:w-48 md:h-40 z-20 md:rounded-r-sm rounded-b-[5px]",
-              offset === 1 &&
-                "bg-transparent bg-gradient-to-r md:bg-gradient-to-b to-[#649BC7] from-[#314C61] p-3 md:p-5 flex items-center justify-center w-20 h-20 md:w-40 md:h-40 md:-mt-8 z-10 md:rounded-r-sm rounded-b-[5px]",
-              offset === 2 &&
-                "bg-transparent bg-gradient-to-r md:bg-gradient-to-b to-[#649BC7] from-[#314C61] p-2 md:p-5 flex items-center justify-center w-12 h-12 md:w-24 md:h-24 max-md:-ml-4 md:-mt-10 z-0 md:rounded-r-sm rounded-b-[5px]"
-            );
+          <div
+            {...bind()}
+            className="flex flex-row md:flex-col items-start cursor-grab select-none active:cursor-grabbing"
+            style={{ touchAction: "none" }}
+          >
+            {[-2, -1, 0, 1, 2].map((offset, i) => {
+              const { Icon } = getIconAt(offset);
+              const sizeClass = clsx(
+                offset === -2 &&
+                  "bg-transparent bg-gradient-to-r md:bg-gradient-to-b from-[#649BC7] to-[#314C61] p-2 md:p-5 flex items-center justify-center w-12 h-12 md:w-24 md:h-24 max-md:-mr-4 md:-mb-10 z-0 md:rounded-r-sm rounded-b-[5px]",
+                offset === -1 &&
+                  "bg-transparent bg-gradient-to-r md:bg-gradient-to-b from-[#649BC7] to-[#314C61] p-3 md:p-5 flex items-center justify-center w-20 h-20 md:w-40 md:h-40 md:-mb-8 z-10 md:rounded-r-sm rounded-b-[5px]",
+                offset === 0 &&
+                  "bg-transparent bg-gradient-to-b md:bg-gradient-to-r from-[#5F93BD] to-[#000000] to-15% p-5 flex items-center justify-center w-28 h-28 md:w-48 md:h-40 z-20 md:rounded-r-sm rounded-b-[5px]",
+                offset === 1 &&
+                  "bg-transparent bg-gradient-to-r md:bg-gradient-to-b to-[#649BC7] from-[#314C61] p-3 md:p-5 flex items-center justify-center w-20 h-20 md:w-40 md:h-40 md:-mt-8 z-10 md:rounded-r-sm rounded-b-[5px]",
+                offset === 2 &&
+                  "bg-transparent bg-gradient-to-r md:bg-gradient-to-b to-[#649BC7] from-[#314C61] p-2 md:p-5 flex items-center justify-center w-12 h-12 md:w-24 md:h-24 max-md:-ml-4 md:-mt-10 z-0 md:rounded-r-sm rounded-b-[5px]"
+              );
 
-            return (
-              <div
-                key={i}
-                className={`flex items-center drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)] justify-center ${sizeClass}`}
-                onClick={() => {
-                  const newIndex =
-                    (currentIndex + offset + icons.length) % icons.length;
-                  handleChangeIndex(newIndex);
-                }}
-              >
-                <Icon className="text-white w-full h-full" />
-              </div>
-            );
-          })}
-        </div>
+              return (
+                <div
+                  key={i}
+                  className={`flex items-center drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)] justify-center ${sizeClass}`}
+                  onClick={() => {
+                    const newIndex =
+                      (currentIndex + offset + icons.length) % icons.length;
+                    handleChangeIndex(newIndex);
+                  }}
+                >
+                  <Icon className="text-white w-full h-full" />
+                </div>
+              );
+            })}
+          </div>
+        </motion.div>
 
-        <div className="flex flex-col items-center justify-start w-full h-full text-center md:text-left">
+        <motion.div
+          variants={fadeIn("up", 0)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+          className="flex flex-col items-center justify-start w-full h-full text-center md:text-left"
+        >
           <h2 className="text-5xl md:text-6xl font-semibold bg-gradient-to-r from-[#182B3C] to-[#4174A2] bg-clip-text text-transparent w-fit">
             {getIconAt(0).label}
           </h2>
           <p className="text-2xl md:text-3xl font-medium text-[#182B3C] md:border-b-4 md:border-r-4 md:border-[#649BC7] py-6 pr-4">
             {getIconAt(0).description}
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

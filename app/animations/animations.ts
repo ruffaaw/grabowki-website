@@ -10,6 +10,7 @@ export const fadeIn = (
   const transition: Transition = {
     type: "spring",
     duration: 1.3,
+    ease: "easeOut",
     delay,
   };
 

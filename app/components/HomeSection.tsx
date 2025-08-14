@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { fadeIn } from "../animations/animations";
 
 export default function HomeSection() {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -56,7 +57,13 @@ export default function HomeSection() {
           }}
         />
         {imageLoaded && (
-          <div className="relative z-10 flex flex-col items-center md:items-start justify-end h-full text-start px-12 py-10">
+          <motion.div
+            variants={fadeIn("right", 1)}
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true, amount: 0.3 }}
+            className="relative z-10 flex flex-col items-center md:items-start justify-end h-full text-start px-12 py-10"
+          >
             <h1 className="max-md:hidden text-white text-8xl lg:text-9xl font-normal drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
               OSIEDLE
             </h1>
@@ -69,7 +76,7 @@ export default function HomeSection() {
             >
               Zobacz ofertę
             </a>
-          </div>
+          </motion.div>
         )}
       </section>
     </>

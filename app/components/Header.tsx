@@ -2,6 +2,8 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { fadeIn } from "../animations/animations";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +27,11 @@ export default function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header
+    <motion.header
+      variants={fadeIn("down", 1)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.3 }}
       className={`fixed w-screen z-30 flex justify-between items-center  ${
         isMenuOpen
           ? "bg-[var(--themeBlueLight)]"
@@ -145,6 +151,6 @@ export default function Header() {
           </Link>
         </div>
       )}
-    </header>
+    </motion.header>
   );
 }

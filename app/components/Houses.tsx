@@ -118,7 +118,7 @@ export default function Houses() {
                     : "bg-yellow-500"
                 } ${
                   mieszkanie.id === currentId
-                    ? "w-6 h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 z-50 text-base md:text-xl"
+                    ? "w-6 h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 z-20 text-base md:text-xl"
                     : "w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-xs md:text-base"
                 } text-black rounded-full flex items-center justify-center font-bold cursor-pointer transition-all z-10 hover:scale-125`}
                 style={{

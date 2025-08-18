@@ -209,7 +209,7 @@ export default function Houses() {
                   </p>
                 </div>
                 <a
-                  href={currentId % 2 === 0 ? "/Rzuty/1a.jpg" : "/Rzuty/1b.jpg"}
+                  href={`/Rzuty/${current.nazwa.split(" ")[1]}.jpg`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-center gap-3 px-[100px] py-2 lg:py-3 bg-[var(--themeBlueDark)] hover:bg-[var(--themeBlueLight)] hover:scale-110 text-white text-2xl md:text-4xl font-semibold w-fit rounded-[5px]"

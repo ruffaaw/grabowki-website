@@ -89,15 +89,25 @@ export default function Houses() {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, amount: 0.3 }}
-            className="relative aspect-[16/9] flex-1 w-full"
+            className="relative aspect-[4/3] lg:aspect-[16/9] flex-1 w-full"
           >
             <Image
-              src="/dron111.png"
+              src="/dronD.png"
               alt="Zdjęcie inwestycji"
               fill
-              className="object-contain"
+              className="hidden lg:flex object-cover"
               priority={false}
               unoptimized
+              quality={100}
+            />
+            <Image
+              src="/dronM.png"
+              alt="Zdjęcie inwestycji"
+              fill
+              className="flex lg:hidden object-cover"
+              priority={false}
+              unoptimized
+              quality={100}
             />
 
             {mieszkania.map((mieszkanie) => (
@@ -108,7 +118,7 @@ export default function Houses() {
                 transition={{ delay: 0.5, ease: "easeOut" }}
                 whileHover={{ zIndex: 20 }}
                 viewport={{ once: true, amount: 0.3 }}
-                className={`absolute ${
+                className={`hidden lg:flex absolute ${
                   mieszkanie.id === currentId
                     ? "bg-[var(--themeBlueDark)] text-white drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]"
                     : mieszkanie.status === 0
@@ -119,11 +129,43 @@ export default function Houses() {
                 } ${
                   mieszkanie.id === currentId
                     ? "w-6 h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 z-20 text-base md:text-xl"
-                    : "w-4 h-4 md:w-5 md:h-5 xl:w-6 xl:h-6 text-xs md:text-base"
-                } text-black rounded-full flex items-center justify-center font-bold cursor-pointer transition-all z-10 hover:scale-125`}
+                    : "w-4 h-4 md:w-5 md:h-5 md:hover:w-7 md:hover:h-7 xl:w-6 xl:h-6 xl:hover:w-8 xl:hover:h-8 md:hover:text-xl text-xs md:text-base "
+                } text-black rounded-full flex items-center justify-center font-bold cursor-pointer transition-all z-10`}
                 style={{
-                  left: `${mieszkanie.x}%`,
-                  top: `${mieszkanie.y}%`,
+                  left: `${mieszkanie.xD}%`,
+                  top: `${mieszkanie.yD}%`,
+                  transform: "translate(-50%, -50%)",
+                }}
+                onClick={() => setCurrentId(mieszkanie.id)}
+              >
+                {getNumberApartments(mieszkanie.nazwa)}
+              </motion.button>
+            ))}
+
+            {mieszkania.map((mieszkanie) => (
+              <motion.button
+                key={mieszkanie.id}
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.5, ease: "easeOut" }}
+                whileHover={{ zIndex: 20 }}
+                viewport={{ once: true, amount: 0.3 }}
+                className={`flex lg:hidden absolute ${
+                  mieszkanie.id === currentId
+                    ? "bg-[var(--themeBlueDark)] text-white drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]"
+                    : mieszkanie.status === 0
+                    ? "bg-red-500"
+                    : mieszkanie.status === 1
+                    ? "bg-green-500"
+                    : "bg-yellow-500"
+                } ${
+                  mieszkanie.id === currentId
+                    ? "w-6 h-6 md:w-7 md:h-7 xl:w-8 xl:h-8 z-20 text-base md:text-xl"
+                    : "w-4 h-4 hover:w-6 hover:h-6 hover:text-base md:w-5 md:h-5 md:hover:w-7 md:hover:h-7 md:hover:text-xl xl:w-6 xl:h-6 text-xs md:text-base"
+                } text-black rounded-full flex items-center justify-center font-bold cursor-pointer transition-all z-10`}
+                style={{
+                  left: `${mieszkanie.xM}%`,
+                  top: `${mieszkanie.yM}%`,
                   transform: "translate(-50%, -50%)",
                 }}
                 onClick={() => setCurrentId(mieszkanie.id)}

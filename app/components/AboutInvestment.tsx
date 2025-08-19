@@ -62,6 +62,7 @@ export default function AboutInvestment() {
               fill
               className="object-cover drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)]"
               priority={false}
+              unoptimized
             />
           </motion.div>
         </div>
@@ -80,6 +81,7 @@ export default function AboutInvestment() {
               fill
               className="object-cover drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)]"
               priority={false}
+              unoptimized
             />
           </motion.div>
           <div className="flex-1 flex flex-col space-y-5 max-md:px-6">
@@ -150,6 +152,7 @@ export default function AboutInvestment() {
               fill
               className="object-cover drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)]"
               priority={false}
+              unoptimized
             />
           </motion.div>
         </div>

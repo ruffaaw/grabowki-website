@@ -52,6 +52,7 @@ export default function HomeSection() {
           quality={100}
           priority
           className="object-cover object-center"
+          unoptimized
           onLoad={() => {
             setTimeout(() => setImageLoaded(true), 500);
           }}

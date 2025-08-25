@@ -6,6 +6,15 @@ import { fadeIn } from "../animations/animations";
 
 export default function HomeSection() {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const [isDay, setIsDay] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsDay((prev) => !prev);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (!imageLoaded) {
@@ -51,7 +60,23 @@ export default function HomeSection() {
           fill
           quality={100}
           priority
-          className="object-cover object-center"
+          className={`object-cover object-center transition-opacity duration-700 ease-in-out ${
+            isDay ? "opacity-100" : "opacity-0"
+          }`}
+          unoptimized
+          onLoad={() => {
+            setTimeout(() => setImageLoaded(true), 500);
+          }}
+        />
+        <Image
+          src="/Grabówki1 zachód.png"
+          alt="Zdjęcie w tle"
+          fill
+          quality={100}
+          priority
+          className={`object-cover object-center transition-opacity duration-700 ease-in-out ${
+            !isDay ? "opacity-100" : "opacity-0"
+          }`}
           unoptimized
           onLoad={() => {
             setTimeout(() => setImageLoaded(true), 500);
@@ -65,15 +90,15 @@ export default function HomeSection() {
             viewport={{ once: true, amount: 0.3 }}
             className="relative z-10 flex flex-col items-center md:items-start justify-end h-full text-start px-12 py-10"
           >
-            <h1 className="max-md:hidden text-white text-8xl lg:text-9xl font-normal drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
+            <h1 className="max-md:hidden text-white text-6xl lg:text-7xl font-normal drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)]">
               OSIEDLE
             </h1>
-            <h1 className="max-md:hidden text-white text-[160px] lg:text-[250px] xl:text-[300px] font-normal drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] -my-12 lg:-mt-16 lg:-mb-18 xl:-mt-24 xl:-mb-24">
+            <h1 className="max-md:hidden text-white text-[100px] lg:text-[150px] xl:text-[200px] font-normal drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] -my-6 lg:-my-12 xl:-my-16">
               GRABÓWKI
             </h1>
             <a
               href="#domy"
-              className="bg-[var(--themeBlueDark)] text-white text-3xl md:text-4xl lg:text-[40px] px-10 py-3 hover:bg-[var(--themeBlueLight)] hover:scale-110 transition drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] text-center "
+              className="bg-[var(--themeBlueDark)] text-white text-2xl md:text-3xl lg:text-4xl px-10 py-3 hover:bg-[var(--themeBlueLight)] hover:scale-110 transition drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] text-center "
             >
               Zobacz ofertę
             </a>

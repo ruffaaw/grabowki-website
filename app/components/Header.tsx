@@ -51,7 +51,7 @@ export default function Header() {
             alt="Logo"
             width={70}
             height={50}
-            className="mr-2 drop-shadow-[10px_15px_25px_rgba(0,0,0,0.25)] hover:scale-125"
+            className="mr-2 drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] hover:scale-125"
           />
         </Link>
       </div>
@@ -70,7 +70,7 @@ export default function Header() {
           <Link
             key={item.href}
             href={item.href}
-            className="hover:scale-125 transition-all drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)]"
+            className="hover:scale-125 transition-all drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)]"
           >
             {item.label}
           </Link>

@@ -131,7 +131,7 @@ export default function Profits() {
   return (
     <section
       id="profity"
-      className="flex flex-col max-md:px-6 md:pr-12 max-md:pb-24 md:py-24 bg-transparent bg-linear-to-b to-[#D5EBF9] from-[#E8E8E8] md:border-t-[1px] md:border-[#182B3C] scroll-mt-20"
+      className="flex flex-col max-md:px-6 md:pr-12 max-md:pb-24 md:py-24 bg-transparent bg-linear-to-b to-[#D5EBF9] from-white md:border-t-[1px] md:border-[#182B3C] scroll-mt-20"
     >
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 max-md:h-[100vh]">
         <motion.div
@@ -163,7 +163,7 @@ export default function Profits() {
               return (
                 <div
                   key={i}
-                  className={`flex items-center drop-shadow-[15px_10px_25px_rgba(0,0,0,0.25)] justify-center ${sizeClass}`}
+                  className={`flex items-center drop-shadow-[2px_2px_4px_rgba(0,0,0,0.5)] justify-center ${sizeClass}`}
                   onClick={() => {
                     const newIndex =
                       (currentIndex + offset + icons.length) % icons.length;
